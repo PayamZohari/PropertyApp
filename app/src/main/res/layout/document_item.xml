@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/pdf_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_margin"
+            android:src="@drawable/pdf" />
+
+
+        <TextView
+            android:id="@+id/document_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/bkoodak"
+            android:layout_toRightOf="@id/pdf_icon"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:layout_marginRight="@dimen/activity_margin"
+            tools:text="title"/>
+
+
+        <ImageButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/activity_margin"
+            android:background="@drawable/greatersign"/>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

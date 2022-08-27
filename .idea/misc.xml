@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MockAPIResponse/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1415" />
+        <entry key="..\:/MockAPIResponse/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/MockAPIResponse/app/src/main/res/layout/activity_pdfactivity.xml" value="0.184375" />
+        <entry key="..\:/MockAPIResponse/app/src/main/res/layout/attribute_item.xml" value="0.18385416666666668" />
+        <entry key="..\:/MockAPIResponse/app/src/main/res/layout/feature_item.xml" value="0.2680722891566265" />
+        <entry key="..\:/MockAPIResponse/app/src/main/res/layout/image_layout.xml" value="0.18385416666666668" />
+        <entry key="..\:/MockAPIResponse/app/src/main/res/layout/pdf_layout.xml" value="0.18659420289855072" />
+        <entry key="..\:/MockAPIResponse/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1415" />
+        <entry key="..\:/MockAPIResponse/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1415" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

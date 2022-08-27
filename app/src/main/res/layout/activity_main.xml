@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:src="@drawable/loading" />
+
+        <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bkoodak"
+        android:layout_gravity="right"
+        android:textSize="24sp"
+        android:layout_margin="@dimen/activity_margin"
+        tools:text="title of property"/>
+
+        <TextView
+            android:id="@+id/price_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bkoodak"
+            android:textColor="@color/price_color"
+            android:layout_gravity="right"
+            android:textSize="24sp"
+            android:layout_marginRight="@dimen/activity_margin"
+            android:layout_marginLeft="@dimen/activity_margin"
+            tools:text="price of property"/>
+
+        <TextView
+            android:id="@+id/address_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bnazanin"
+            android:textColor="@color/light_gray"
+            android:layout_gravity="right"
+            android:textSize="16sp"
+            android:layout_margin="@dimen/activity_margin"
+            tools:text="price of property"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/calender"
+                android:layout_margin="@dimen/icons_margin"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/date_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:fontFamily="@font/bnazanin"
+                android:textColor="@color/light_gray"
+                android:textSize="12sp"
+                tools:text="8/26/2022" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/icons_margin"
+                android:src="@drawable/views" />
+
+            <TextView
+                android:id="@+id/views_text_view"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:fontFamily="@font/bnazanin"
+                android:textColor="@color/light_gray"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:layout_marginRight="@dimen/activity_margin"
+                tools:text="111"/>
+
+
+            <TextView
+                android:id="@+id/id_text_view"
+                android:gravity="right"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bnazanin"
+                android:textColor="@color/light_gray"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:layout_margin="@dimen/activity_margin"
+                tools:text="1234"/>
+
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@android:color/darker_gray" />
+
+
+        <TextView
+            android:id="@+id/detalis_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bkoodak"
+            android:layout_gravity="right"
+            android:textSize="20sp"
+            android:layout_margin="@dimen/activity_margin"
+            android:text="جزئیات"/>
+
+           <ListView
+               android:id="@+id/attribute_listview"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:divider="@null"
+               android:dividerHeight="0dp" />
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/attributes_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bkoodak"
+            android:layout_gravity="right"
+            android:textSize="20sp"
+            android:layout_margin="@dimen/activity_margin"
+            android:text="ویژگی ها"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <GridView
+            android:id="@+id/features_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:numColumns="2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@android:color/darker_gray" />
+
+
+        <TextView
+            android:id="@+id/otherinfo_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bkoodak"
+            android:layout_gravity="right"
+            android:textSize="20sp"
+            android:layout_margin="@dimen/activity_margin"
+            android:text="اطلاعات دیگر"/>
+
+        <ListView
+            android:id="@+id/docs_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@android:color/darker_gray" />
+
+
+        <TextView
+            android:id="@+id/description_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bkoodak"
+            android:layout_gravity="right"
+            android:textSize="20sp"
+            android:layout_margin="@dimen/activity_margin"
+            android:text="شرح"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:id="@+id/description_value_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bnazanin"
+            android:layout_gravity="right"
+            android:textSize="16sp"
+            android:layout_margin="@dimen/activity_margin"
+            android:text="توضیحات"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
