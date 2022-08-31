@@ -6,8 +6,10 @@ import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.webkit.WebView
 import android.widget.GridView
+import android.widget.ImageButton
 import android.widget.ListView
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
@@ -33,9 +35,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var attributesListView: ListView
     private lateinit var docsListView: ListView
     private lateinit var featuresGridView: GridView
-    lateinit var viewPager: ViewPager
-    lateinit var viewPagerAdapter: ViewPagerAdapter
-    lateinit var imageList: ArrayList<String>
+    private lateinit var viewPager: ViewPager
+    private lateinit var viewPagerAdapter: ViewPagerAdapter
+    private lateinit var imageList: ArrayList<String>
+    private lateinit var latitude : String
+    private lateinit var langitude : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,8 +51,13 @@ class MainActivity : AppCompatActivity() {
 
         imageList = java.util.ArrayList<String>()
 
-
-
+        val imageButton = findViewById<ImageButton>(R.id.map_button)
+        imageButton.setOnClickListener{
+            val locationUri = Uri.parse("http://maps.google.com/maps?q=loc:" + latitude + "," + langitude )
+            val googlemapIntent = Intent(Intent.ACTION_VIEW,locationUri)
+            googlemapIntent.setPackage("com.google.android.apps.maps")
+            startActivity(googlemapIntent)
+        }
 
         docsListView.setOnItemClickListener { parent, view, position, id ->
             val selectedItem = parent.getItemAtPosition(position) as Document
@@ -100,6 +109,12 @@ class MainActivity : AppCompatActivity() {
         setDocuments(property, utilityInstance)
         setFeatures(property)
         setImages(property)
+        setSpecificLocation(property)
+    }
+
+    private fun setSpecificLocation(property : Property){
+        langitude = property.address.longitude
+        latitude = property.address.latitude
     }
 
     private fun setPrice(property: Property) {

@@ -20,15 +20,34 @@
             android:layout_height="200dp"
             tools:src="@drawable/loading" />
 
-        <TextView
-        android:id="@+id/title_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/bkoodak"
-        android:layout_gravity="right"
-        android:textSize="24sp"
-        android:layout_margin="@dimen/activity_margin"
-        tools:text="title of property"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/map_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/activity_margin"
+                android:background="@drawable/map"/>
+
+            <TextView
+                android:id="@+id/title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bkoodak"
+                android:layout_alignParentRight="true"
+                android:textSize="24sp"
+                android:layout_margin="@dimen/activity_margin"
+                tools:text="title of property"/>
+
+        </RelativeLayout>
+
+
 
         <TextView
             android:id="@+id/price_text_view"
